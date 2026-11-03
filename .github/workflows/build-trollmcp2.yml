@@ -11,6 +11,8 @@ permissions:
 # 现只保留显式 workflow_dispatch（App 一键触发 / github.trigger_build 才编译），杜绝重复。
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
   # v4.4.5: 原生工具链（lua arm64 iOS 交叉编译，产物缓存秒级）。
